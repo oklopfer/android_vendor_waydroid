@@ -53,7 +53,7 @@ if [ ! -f build/make/core/version_defaults.mk ]; then
 fi
 
 sdkv=$(cat build/make/core/version_defaults.mk | grep "PLATFORM_SDK_VERSION :=" | grep -o "[[:digit:]]\+")
-manifests_url="${manifests_url}-${sdkv}"
+manifests_url="https://raw.githubusercontent.com/oklopfer/android_vendor_waydroid/lineage-20.1/manifest_scripts/manifests-${sdkv}"
 manifests_path="${manifests_path}-${sdkv}"
 
 mkdir -p ${loc_man}
